@@ -14,12 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://stay-ez.vercel.app",
-  })
-);
+app.use(cors());
 
 const port = process.env.PORT || 8080;
 
@@ -148,6 +143,8 @@ app.get("/place/:id", async (req, res) => {
 //GET Listings
 app.get("/", async (req, res) => {
   const allPlaces = await Places.find({});
+  const { token } = req.cookies;
+  console.log(token);
   res.json(allPlaces);
 });
 
