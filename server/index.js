@@ -14,7 +14,15 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    credentials: true,
+    optionsSuccessStatus: 204,
+  })
+);
 
 const port = process.env.PORT || 8080;
 
@@ -58,7 +66,6 @@ app.post("/login", async (req, res) => {
         console.log(passOK);
         if (passOK) {
           const { email, _id, name } = user;
-
           jwt.sign({ email, _id, name }, jwtSecret, {}, (err, token) => {
             err
               ? console.log(err)
@@ -123,7 +130,7 @@ app.put("/account/places", async (req, res) => {
 });
 
 //GET /account/places
-app.get("/account/places", cors(), (req, res) => {
+app.get("/account/places", (req, res) => {
   const { token } = req.cookies;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
     if (err) throw err;
@@ -143,8 +150,6 @@ app.get("/place/:id", async (req, res) => {
 //GET Listings
 app.get("/", async (req, res) => {
   const allPlaces = await Places.find({});
-  const { token } = req.cookies;
-  console.log(token);
   res.json(allPlaces);
 });
 
