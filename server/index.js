@@ -34,7 +34,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-mongoose.connect("mongodb://localhost:27017/bnb");
+mongoose.connect(
+  "mongodb+srv://prashant:VV-8571863740@cluster0.godfw.mongodb.net/bnb?retryWrites=true&w=majority&appName=Cluster0"
+);
 
 const jwtSecret = "fjslr47856fnb";
 
