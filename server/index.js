@@ -21,6 +21,8 @@ app.use(
   })
 );
 
+const port = process.env.PORT || 8080;
+
 // Defining Storage for Multer (File uploads)
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -169,4 +171,4 @@ app.post("/my-bookings", async (req, res) => {
   res.json(myBookings);
 });
 
-app.listen(8080, () => console.log("server connected"));
+app.listen(port, () => console.log(`Server Connected to Port: ${port}`));
