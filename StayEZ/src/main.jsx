@@ -15,7 +15,7 @@ import { Provider } from "./context/userContext";
 import Account from "./components/Account/Account";
 import Home from "./components/Home/Home";
 
-axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "https://stayez.onrender.com";
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter(
