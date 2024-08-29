@@ -123,7 +123,7 @@ app.put("/account/places", async (req, res) => {
 });
 
 //GET /account/places
-app.get("/account/places", (req, res) => {
+app.get("/account/places", cors(), (req, res) => {
   const { token } = req.cookies;
   jwt.verify(token, jwtSecret, {}, async (err, userData) => {
     if (err) throw err;
