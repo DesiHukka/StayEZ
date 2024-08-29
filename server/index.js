@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://stayez.onrender.com",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     credentials: true,
