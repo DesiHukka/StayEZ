@@ -17,7 +17,7 @@ app.use("/uploads", express.static("uploads"));
 app.use(
   cors({
     credentials: true,
-    origin: "https://stay-ez.vercel.app/",
+    origin: "https://stay-ez.vercel.app",
   })
 );
 

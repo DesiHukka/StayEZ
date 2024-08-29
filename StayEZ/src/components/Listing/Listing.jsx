@@ -7,7 +7,7 @@ function Listing({ details }) {
       <div className="flex flex-col">
         <div className="max-w-64 max-h-64 overflow-hidden rounded-lg">
           <img
-            src={`http://localhost:8080/uploads/${details.photos[0]}`}
+            src={`https://stayez.onrender.com/uploads/${details.photos[0]}`}
             className="object-cover aspect-square hover:scale-105 ease-in-out duration-300 "
           />
         </div>

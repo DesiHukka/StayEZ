@@ -41,10 +41,10 @@ function ShowListing({ listing }) {
         {photos.map((photo) => {
           return (
             <div className="w-1/2 rounded-lg overflow-hidden">
-              <Link to={`http://localhost:8080/uploads/${photo}`}>
+              <Link to={`https://stayez.onrender.com/uploads/${photo}`}>
                 <img
                   className="object-cover aspect-square"
-                  src={`http://localhost:8080/uploads/${photo}`}
+                  src={`https://stayez.onrender.com/uploads/${photo}`}
                   alt=""
                 />
               </Link>
@@ -67,7 +67,7 @@ function ShowListing({ listing }) {
               return (
                 <div className="col-span-2 row-span-2 cursor-pointer overflow-hidden">
                   <img
-                    src={`http://localhost:8080/uploads/${photo}`}
+                    src={`https://stayez.onrender.com/uploads/${photo}`}
                     className="object-cover aspect-square hover:scale-105 ease-in duration-300"
                   />
                 </div>
@@ -79,7 +79,7 @@ function ShowListing({ listing }) {
               return (
                 <div className="cursor-pointer overflow-hidden">
                   <img
-                    src={`http://localhost:8080/uploads/${photo}`}
+                    src={`https://stayez.onrender.com/uploads/${photo}`}
                     className="object-cover aspect-square hover:scale-105 ease-in duration-300"
                   />
                 </div>
@@ -88,7 +88,7 @@ function ShowListing({ listing }) {
               return (
                 <div className="cursor-pointer overflow-hidden">
                   <img
-                    src={`http://localhost:8080/uploads/${photo}`}
+                    src={`https://stayez.onrender.com/uploads/${photo}`}
                     className="object-cover aspect-square hover:scale-105 ease-in duration-300"
                   />
                 </div>
