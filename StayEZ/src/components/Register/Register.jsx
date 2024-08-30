@@ -7,7 +7,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [name, setName] = useState("");
-  const [redirect, setRedirect] = useeState(false);
+  const [redirect, setRedirect] = useState(false);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
