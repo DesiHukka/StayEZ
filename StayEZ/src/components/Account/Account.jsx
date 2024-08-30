@@ -38,28 +38,33 @@ function Account() {
       {subpage === "places" && <Places />}
       {subpage === "bookings" && <Bookings />}
       {subpage === "profile" && (
-        <div className="p-4 bg-slate-300">
+        <div className="p-4 bg-slate-100">
           <div className="flex flex-col gap-4 w-3/4 md:w-3/5 text-lg">
             <h2 className="font-semibold">
               Hi,{" "}
               <span className="font-semibold text-rose-500">{user.name}</span>
             </h2>
             <p className="text-balance">
-              You can check your bookings by clicking on the "My Bookings" tab
-              above.
+              You can check your bookings by clicking on the{" "}
+              <span className="text-teal-400">"My Bookings"</span> tab above.
             </p>
             <p className="text-balance">
-              If you want to list your own place, then Click on "My Places" tab.
-              There you will find "Add New" Button. Clicking it will open a form
-              regarding the details of your place. Just fill the form completely
-              and upload atleast 5 images for better interaction with the
-              customers.
+              If you want to list your own place, then Click on{" "}
+              <span className="text-teal-400">"My Places"</span> tab. There you
+              will find <span className="text-teal-400">"Add New"</span> Button.
+              Clicking it will open a form regarding the details of your place.
+              Just fill the form completely and upload atleast 5 images for
+              better interaction with the customers.
             </p>
             <p className="text-balance">
-              Moreover, "My Places" tab will also list your all places, so you
-              can easily keep watch on your listed places.
+              Moreover, <span className="text-teal-400">"My Places"</span> tab
+              will also list your all places, so you can easily keep watch on
+              your listed places.
             </p>
           </div>
+          <button className="bg-rose-500 font-semibold text-white py-2 px-4">
+            Logout
+          </button>
         </div>
       )}
     </div>
