@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/account/places/:id",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ]
 }
