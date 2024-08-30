@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/:a*",
-      "destination": "/"
+      "source": "/account/places/:id",
+      "destination": "/index.html"
     }
   ]
 }
