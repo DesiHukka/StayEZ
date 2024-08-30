@@ -82,7 +82,11 @@ function AddBooking({ listing, deviceWidth }) {
       {nights > 0 && (
         <div>
           <span>
-            Total Price: &#8377;{(listing.price * nights).toLocaleString()}
+            <span className="text-rose-500 font-semibold">Total Price:</span>{" "}
+            &#8377;&nbsp;{(listing.price * nights).toLocaleString()}
+          </span>
+          <span className="text-sm text-gray-600">
+            ({nights} Nights X {listing.price.toLocaleString()})
           </span>
         </div>
       )}
