@@ -93,7 +93,7 @@ function AddBooking({ listing, deviceWidth }) {
       <button
         disabled={!(checkIn && checkOut && guests)}
         onClick={handleBooking}
-        className="bg-rose-400 text-white font-bold p-4 rounded-full mt-4"
+        className="bg-rose-400 text-white font-bold p-4 rounded-full mt-4 disabled:cursor-not-allowed disabled:bg-gray-400"
       >
         Book This Place
       </button>
