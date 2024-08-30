@@ -5,6 +5,7 @@ import { FaCircleUser } from "react-icons/fa6";
 import { useContext, useState, useEffect } from "react";
 import userContext from "../../context/userContext";
 import { Link } from "react-router-dom";
+import axios from "axios";
 function Header() {
   // Destination will contain address array for Search functionality.
   const [destinations, setDestinations] = useState([]);
