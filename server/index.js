@@ -70,7 +70,7 @@ app.post("/login", async (req, res) => {
             err
               ? console.log(err)
               : res
-                  .cookie("token", token, { sameSite: false })
+                  .cookie("token", token, { sameSite: "none", secure: true })
                   .json({ email, _id, name });
           });
         }
