@@ -26,6 +26,7 @@ function AddBooking({ listing, deviceWidth }) {
 
   //Number of Nights
   let nights = differenceInCalendarDays(new Date(checkOut), new Date(checkIn));
+  console.log(checkIn);
 
   const handleBooking = async () => {
     if (!user) {
@@ -65,7 +66,7 @@ function AddBooking({ listing, deviceWidth }) {
         <input
           type="date"
           value={checkOut}
-          min={checkIn + 1}
+          min={checkIn}
           onChange={(e) => setCheckOut(e.target.value)}
           className="bg-rose-200 p-2 rounded-md"
         />
