@@ -40,7 +40,7 @@ function Home() {
   }
 
   return (
-    <div className="flex gap-4 w-3/4 justify-center mx-auto flex-wrap my-4">
+    <div className="flex gap-6 w-3/4 justify-center mx-auto flex-wrap my-4">
       {places}
     </div>
   );
