@@ -22,7 +22,9 @@ function Header() {
   const addresses = places?.map((place) => place.address);
   if (addresses) {
     setDestinations([...addresses]);
+    console.log(destinations);
   }
+  console.log(destinations);
 
   return (
     <header className="flex justify-around my-2 border-b-4 p-2 ">
