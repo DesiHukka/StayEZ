@@ -130,14 +130,15 @@ app.put("/account/places", async (req, res) => {
 });
 
 //GET /account/places
-app.get("/account/places", (req, res) => {
+app.get("/account/places", async (req, res) => {
   const { token } = req.cookies;
-  jwt.verify(token, jwtSecret, {}, async (err, userData) => {
+  let id;
+  jwt.verify(token, jwtSecret, {}, (err, userData) => {
     if (err) throw err;
-    const { _id } = userData;
-    const userPlaces = await Places.find({ owner: _id });
-    res.json(userPlaces);
+    id = userData._id;
   });
+  const userPlaces = await Places.find({ owner: _id });
+  res.json(userPlaces);
 });
 
 // GET Place
