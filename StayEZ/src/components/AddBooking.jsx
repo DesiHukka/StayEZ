@@ -57,6 +57,7 @@ function AddBooking({ listing, deviceWidth }) {
         <input
           type="date"
           value={checkIn}
+          max={checkOut}
           onChange={(e) => setCheckIn(e.target.value)}
           className="bg-rose-200 p-2 rounded-md"
         />
