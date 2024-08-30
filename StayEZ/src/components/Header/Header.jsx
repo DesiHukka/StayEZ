@@ -18,7 +18,7 @@ function Header() {
     getListings();
   }, []);
 
-  const addresses = places.map((place) => place.address);
+  const addresses = places?.map((place) => place.address);
   if (addresses) {
     setDestinations([...addresses]);
   }
