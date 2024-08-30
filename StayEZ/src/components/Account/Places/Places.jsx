@@ -50,7 +50,7 @@ function Places() {
     );
   } else if (id !== "new" && !place) {
     return "Loading Places...";
-  } else if (id !== "new" && place) {
+  } else if (id) {
     console.log(id);
     return (
       <AddPlaces
