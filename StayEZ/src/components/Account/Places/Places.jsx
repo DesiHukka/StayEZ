@@ -48,6 +48,8 @@ function Places() {
         <PlaceList placeDetails={placeDetails} />
       </div>
     );
+  } else if (id !== "new" && !place) {
+    return "Loading Places...";
   } else if (id) {
     console.log(id);
     return (
