@@ -13,7 +13,9 @@ function Places() {
   console.log(ready);
 
   const getPlaces = async () => {
-    const { data } = await axios.get("/account/places");
+    const { data } = await axios.get("/account/places", {
+      withCredentials: true,
+    });
     console.log(data);
     setPlaceDetails([...data]);
   };
