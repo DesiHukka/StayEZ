@@ -14,6 +14,7 @@ import axios from "axios";
 import { Provider } from "./context/userContext";
 import Account from "./components/Account/Account";
 import Home from "./components/Home/Home";
+import Places from "./components/Account/Places/Places";
 
 axios.defaults.baseURL = "https://stayez.onrender.com";
 axios.defaults.withCredentials = true; //Removing this will not set cookies
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="listing/:id" element={<Home />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="account/places/:id" element={<Places />} />
       <Route path="account/:subpage?" element={<Account />} />
       <Route path="account/:subpage/:id" element={<Account />} />
     </Route>
