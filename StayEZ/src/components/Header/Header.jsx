@@ -2,7 +2,7 @@ import { MdOutlineTravelExplore } from "react-icons/md";
 import { BsSearchHeartFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaCircleUser } from "react-icons/fa6";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import userContext from "../../context/userContext";
 import { Link } from "react-router-dom";
 function Header() {
