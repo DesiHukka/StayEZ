@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { GrLogin } from "react-icons/gr";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [name, setName] = useState("");
+  const [redirect, setRedirect] = useeState(false);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    await axios.post(
+    const { data } = await axios.post(
       "/register",
       {
         name,
@@ -20,7 +22,14 @@ function Register() {
         withCredentials: true,
       }
     );
+    if (data) {
+      setRedirect(true);
+    }
   };
+
+  if (redirect) {
+    return <Navigate to={"/login"} />;
+  }
 
   return (
     <div className="flex flex-col gap-12 p-4 items-center">
