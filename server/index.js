@@ -137,7 +137,7 @@ app.get("/account/places", async (req, res) => {
     if (err) throw err;
     id = userData._id;
   });
-  const userPlaces = await Places.find({ owner: _id });
+  const userPlaces = await Places.find({ owner: id });
   res.json(userPlaces);
 });
 
