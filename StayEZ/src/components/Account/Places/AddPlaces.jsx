@@ -165,7 +165,7 @@ function AddPlaces({ place, setReady, setPlaceDetails }) {
             <div className="relative" key={imageName}>
               <img
                 className="rounded-lg object-cover aspect-square"
-                src={`https://stay-ez-rqol.vercel.app/uploads/${imageName}`}
+                src={`https://stayez.onrender.com/uploads/${imageName}`}
               />
               <div
                 className="absolute top-2 right-2 text-2xl md:text-3xl text-rose-500 hover:text-black bg-white rounded-full cursor-pointer"

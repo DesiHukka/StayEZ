@@ -15,7 +15,7 @@ import { Provider } from "./context/userContext";
 import Account from "./components/Account/Account";
 import Home from "./components/Home/Home";
 
-axios.defaults.baseURL = "https://stay-ez-rqol.vercel.app";
+axios.defaults.baseURL = "https://stayez.onrender.com";
 axios.defaults.withCredentials = true; //Removing this will not set cookies
 
 const router = createBrowserRouter(

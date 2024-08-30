@@ -28,7 +28,7 @@ function Bookings() {
             <div className="flex flex-col md:w-3/5 md:flex-row gap-2 bg-slate-200 p-4 rounded-lg">
               <div className="w-full md:w-2/5 xl:w-1/5 overflow-hidden">
                 <img
-                  src={`https://stay-ez-rqol.vercel.app/uploads/${photos[0]}`}
+                  src={`https://stayez.onrender.com/uploads/${photos[0]}`}
                   className="object-cover aspect-square"
                 />
               </div>
