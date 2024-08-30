@@ -91,7 +91,7 @@ function AddBooking({ listing, deviceWidth }) {
         </div>
       )}
       <button
-        disabled={!checkIn && !checkOut && !guests}
+        disabled={!(checkIn && checkOut && guests)}
         onClick={handleBooking}
         className="bg-rose-400 text-white font-bold p-4 rounded-full mt-4"
       >
