@@ -9,11 +9,17 @@ function Register() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("/register", {
-      name,
-      email,
-      pass,
-    });
+    await axios.post(
+      "/register",
+      {
+        name,
+        email,
+        pass,
+      },
+      {
+        withCredentials: true,
+      }
+    );
   };
 
   return (
