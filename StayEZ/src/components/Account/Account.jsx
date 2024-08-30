@@ -37,6 +37,11 @@ function Account() {
       </nav>
       {subpage === "places" && <Places />}
       {subpage === "bookings" && <Bookings />}
+      {subpage === "profile" && (
+        <div>
+          <h2>Hi, {user.name}</h2>
+        </div>
+      )}
     </div>
   );
 }
