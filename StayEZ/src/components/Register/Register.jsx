@@ -7,9 +7,9 @@ function Register() {
   const [pass, setPass] = useState("");
   const [name, setName] = useState("");
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    axios.post("/register", {
+    await axios.post("/register", {
       name,
       email,
       pass,
