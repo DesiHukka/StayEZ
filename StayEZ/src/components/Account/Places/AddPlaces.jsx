@@ -42,6 +42,7 @@ function AddPlaces({ place, setReady, setPlaceDetails }) {
       setPrice(place.price);
     }
   }, [place]);
+  console.log(place);
 
   const imageDownloader = async (e) => {
     e.preventDefault();
