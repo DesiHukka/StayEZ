@@ -69,7 +69,9 @@ app.post("/login", async (req, res) => {
           jwt.sign({ email, _id, name }, jwtSecret, {}, (err, token) => {
             err
               ? console.log(err)
-              : res.cookie("token", token).json({ email, _id, name });
+              : res
+                  .cookie("token", token, { sameSite: false })
+                  .json({ email, _id, name });
           });
         }
       })
