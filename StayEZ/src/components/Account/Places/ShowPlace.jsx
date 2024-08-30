@@ -12,7 +12,7 @@ function ShowPlace({ place }) {
       <div className="bg-gray-500 w-28 min-h-20 max-h-64 xs:w-2/5 overflow-hidden rounded-lg">
         <img
           className="object-cover aspect-square"
-          src={`https://stayez.onrender.com/uploads/${place.photos[0]}`}
+          src={`https://stay-ez-rqol.vercel.app/uploads/${place.photos[0]}`}
         />
       </div>
       <div className="flex flex-col w-3/5 gap-2 md:gap-4 justify-center">
