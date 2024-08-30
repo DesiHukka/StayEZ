@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import userContext from "../context/userContext";
 import { Navigate } from "react-router-dom";
+import "date-fns";
 import axios from "axios";
+import { differenceInCalendarDays } from "date-fns";
 
 function AddBooking({ listing, deviceWidth }) {
   const [checkIn, setCheckIn] = useState("");
@@ -21,6 +23,9 @@ function AddBooking({ listing, deviceWidth }) {
     user: user?._id,
     place: listing._id,
   };
+
+  //Number of Nights
+  let nights = differenceInCalendarDays(new Date(checkOut), new Date(checkIn));
 
   const handleBooking = async () => {
     if (!user) {
@@ -74,6 +79,13 @@ function AddBooking({ listing, deviceWidth }) {
           className="w-24 border-2 border-gray-500 p-2 rounded-md"
         />
       </label>
+      {nights > 0 && (
+        <div>
+          <span>
+            Total Price: &#8377;{(listing.price * nights).toLocaleString()}
+          </span>
+        </div>
+      )}
       <button
         onClick={handleBooking}
         className="bg-rose-400 text-white font-bold p-4 rounded-full mt-4"
