@@ -191,14 +191,14 @@ function ShowListing({ listing }) {
         <div className="flex gap-4 ">
           <div className="flex flex-col gap-4 justify-center">
             <h2 className="text-2xl font-semibold">About This Place:</h2>
-            <pre className="text-gray-600 whitespace-pre-wrap">
+            <pre className="text-gray-600 text-sm whitespace-pre-wrap">
               {listing.description}
             </pre>
           </div>
         </div>
         <div className="flex flex-col gap-4 ">
           <h2 className="text-2xl font-semibold">Extra Info:</h2>
-          <pre className=" text-gray-600 mb-4 whitespace-pre-wrap">
+          <pre className=" text-gray-600 mb-4 text-sm whitespace-pre-wrap">
             {listing.extraInfo}
           </pre>
         </div>
