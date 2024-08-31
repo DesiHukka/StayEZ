@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import userContext from "../context/userContext";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "date-fns";
 import axios from "axios";
 import { differenceInCalendarDays } from "date-fns";
@@ -91,12 +91,21 @@ function AddBooking({ listing, deviceWidth }) {
           <div className="text-sm text-gray-600 text-center">
             ({nights} Nights X {listing.price.toLocaleString()})
           </div>
+          {!user && (
+            <div className="mt-2">
+              You need to{" "}
+              <Link to={"/login"} className="text-rose-500">
+                Login
+              </Link>{" "}
+              First...
+            </div>
+          )}
         </div>
       )}
       <button
         disabled={!(checkIn && checkOut && guests)}
         onClick={handleBooking}
-        className="bg-rose-400 text-white font-bold p-4 rounded-full mt-4 hover:bg-rose-700 disabled:cursor-not-allowed disabled:bg-gray-400"
+        className="bg-rose-400 text-white font-bold p-4 rounded-full mt-2 hover:bg-rose-700 disabled:cursor-not-allowed disabled:bg-gray-400"
       >
         Book This Place
       </button>

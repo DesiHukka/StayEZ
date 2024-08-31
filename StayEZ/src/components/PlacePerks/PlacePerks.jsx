@@ -8,7 +8,7 @@ import { LuParkingCircle } from "react-icons/lu";
 import { GiWashingMachine } from "react-icons/gi";
 import { PiTelevisionFill } from "react-icons/pi";
 
-function PlacePerks({ perks, onChange }) {
+function PlacePerks({ perks, onChange, homeNav }) {
   const handleCheckBox = (e) => {
     if (e.target.checked) {
       onChange([...perks, e.target.name]);
@@ -16,7 +16,7 @@ function PlacePerks({ perks, onChange }) {
       onChange([...perks.filter((name) => name !== e.target.name)]);
     }
   };
-  console.log(perks);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       <label className="flex  items-center gap-2 text-xl border-2 p-6">
