@@ -100,7 +100,7 @@ function Home() {
           className="flex xl:gap-8 sm:gap-4 overflow-x-auto whitespace-nowrap scroll-smooth h-16 scrollbar-hide w-3/5 "
         >
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col items-center gap-2 text-gray-600 hover:cursor-pointer ${
               perks.includes("kitchen") && "text-rose-500"
             }`}
           >
@@ -114,7 +114,7 @@ function Home() {
             <span className="text-xs">Kitchen</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col items-center gap-2 text-gray-600 hover:cursor-pointer ${
               perks.includes("dining area") && "text-rose-500"
             }`}
           >
@@ -128,7 +128,7 @@ function Home() {
             <span className="text-xs">Dining Area</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2  text-gray-600 ${
+            className={`flex flex-col items-center gap-2 hover:cursor-pointer text-gray-600 ${
               perks.includes("wifi") && "text-rose-500"
             }`}
           >
@@ -142,7 +142,7 @@ function Home() {
             <span className="text-xs">Wifi</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col items-center gap-2 hover:cursor-pointer text-gray-600 ${
               perks.includes("security camera") && "text-rose-500"
             }`}
           >
@@ -156,7 +156,7 @@ function Home() {
             <span className="text-xs">Security Camera</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col hover:cursor-pointer items-center gap-2 text-gray-600 ${
               perks.includes("smoke alarm") && "text-rose-500"
             }`}
           >
@@ -170,7 +170,7 @@ function Home() {
             <span className="text-xs">Smoke Alarm</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col hover:cursor-pointer items-center gap-2 text-gray-600 ${
               perks.includes("air conditioning") && "text-rose-500"
             }`}
           >
@@ -184,7 +184,7 @@ function Home() {
             <span className="text-xs">AC</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col hover:cursor-pointer items-center gap-2 text-gray-600 ${
               perks.includes("free parking") && "text-rose-500"
             }`}
           >
@@ -198,7 +198,7 @@ function Home() {
             <span className="text-xs">Free Parking</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col hover:cursor-pointer items-center gap-2 text-gray-600 ${
               perks.includes("tv") && "text-rose-500"
             }`}
           >
@@ -212,7 +212,7 @@ function Home() {
             <span className="text-xs">TV</span>
           </label>
           <label
-            className={`flex flex-col items-center gap-2 text-gray-600 ${
+            className={`flex flex-col hover:cursor-pointer items-center gap-2 text-gray-600 ${
               perks.includes("washing machine") && "text-rose-500"
             }`}
           >
