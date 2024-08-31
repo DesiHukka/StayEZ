@@ -44,6 +44,7 @@ function AddBooking({ listing, deviceWidth }) {
   if (redirectBookings) {
     return <Navigate to={"/account/bookings"} />;
   }
+
   return (
     <div
       className={`p-4 max-h-[550px] ${width} shadow-2xl border-2 border-gray-200 flex flex-col gap-4 rounded-xl`}
@@ -57,6 +58,7 @@ function AddBooking({ listing, deviceWidth }) {
         <input
           type="date"
           value={checkIn}
+          min={new Date().toJSON().slice(0, 10)}
           max={checkOut}
           onChange={(e) => setCheckIn(e.target.value)}
           className="bg-rose-200 p-2 rounded-md"
