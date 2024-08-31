@@ -137,6 +137,7 @@ function AddPlaces({ place, setReady, setPlaceDetails }) {
           type="text"
           placeholder="Title"
           className="border-2 border-gray-400 px-4 py-2 rounded-2xl "
+          required
         />
         <input
           value={address}
@@ -144,6 +145,7 @@ function AddPlaces({ place, setReady, setPlaceDetails }) {
           type="text"
           placeholder="Address"
           className="border-2 border-gray-400 px-4 py-2 rounded-2xl "
+          required
         />
         <div className="grid grid-cols-3 gap-1">
           <input
@@ -196,6 +198,7 @@ function AddPlaces({ place, setReady, setPlaceDetails }) {
           rows={6}
           className="border-2 border-gray-400 px-4 py-2 rounded-2xl "
           placeholder="Add Something about this place"
+          required
         />
         <h2>Select All the Perks of your Place:</h2>
         <PlacePerks perks={perks} onChange={setPerks} />
@@ -239,6 +242,7 @@ function AddPlaces({ place, setReady, setPlaceDetails }) {
             type="number"
             min={0}
             className="border-2 border-gray-400 px-4 py-2 rounded-xl "
+            required
           />
         </div>
         <button type="submit">Save</button>
